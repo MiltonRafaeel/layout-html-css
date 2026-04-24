@@ -4,6 +4,7 @@
   --dsc-color-bg-primary: #e8e8e8;
   --dsc-color-bg-secondary: #ffe500;
   --dsc-color-bg-tertiary: #636363;
+  --dsc-color-bg-quaternary: #0caf1d;
 
   --dsc-color-card-bg: #fff;
   --dsc-color-card-border: #d9d9d9;
@@ -78,26 +79,64 @@ main {
 
 header {
     height: 70px;
-    background-color: var(--dsc-color-bg-secondary);
     display: flex;
     align-items: center;
     padding: 0 20px;
 }
 
-nav {
+.dsc-header-client {
     color: var(--dsc-color-font-primary);
+    background-color: var(--dsc-color-bg-secondary);
+}
+
+.dsc-header-admin {
+    color: var(--dsc-color-font-tertiary);
+    background-color: var(--dsc-color-bg-quaternary);
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav h1 {
-    font-size: 24px;
+    font-size: 16px;
 }
 
 nav a {
     font-weight: 700;
     font-size: 14px;
+}
+
+.dsc-navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.dsc-menu-items-container {
+    display: flex;
+}
+
+.dsc-menu-items-container img {
+    width: 20px;
+    height: 20px;
+}
+
+.dsc-menu-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.dsc-menu-item p {
+    display: none;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.dsc-menu-item-active {
+    font-weight: 700;
 }
 
 .dsc-logged-user {
@@ -108,6 +147,15 @@ nav a {
 
 .dsc-logged-user p {
     font-size: 12px;
+}
+
+@media(min-width: 576px) {
+    nav h1 {
+        font-size: 24px;
+    }
+    .dsc-menu-item p {
+        display: unset;
+    }
 }
 
 /*----------------------------------------------------------------------------*/
